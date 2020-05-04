@@ -1,5 +1,5 @@
 # Download Books Springer
-Em meio a muita incertezas e informações que o surto de coronavírus esta causando,
+Em meio a muitas incertezas e informações que o surto de coronavírus esta causando,
 a [Spring Nature](https://www.springernature.com/br) disponibilizou gratuitamente uma
 série de livros essenciais de todas as diciplinas para ajudar e apoiar estudantes e 
 instrutores em todo mundo.

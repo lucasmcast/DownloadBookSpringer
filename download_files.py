@@ -1,5 +1,5 @@
 """
-Modulo responsál por fazer o download dos livros que foram
+Modulo responsável por fazer o download dos livros que foram
 disponibilizados pela Springer de forma gratuita devido
 a pandemia do covid19
 """
@@ -10,6 +10,7 @@ import os.path
 from progress_bar import printProgressBar
 import argparse
 import sys
+import signal
 
 
 def main(books, path_download):
@@ -21,7 +22,7 @@ def main(books, path_download):
     url = urljoin(BASE_URL, path_url)
     l = len(books)
 
-    print("Executando Downloads dos Livros")
+    print("\nExecutando Downloads dos Livros")
     printProgressBar(0, l, prefix="Progress", suffix="Complete", length=50)
 
     for i, book in enumerate(books):
@@ -40,6 +41,15 @@ def main(books, path_download):
 
         printProgressBar(i + 1, l, prefix='Progress:', suffix='Complete', length=50)
 
+def signal_handler(signal, frame):
+    response = input("\nDeseja realmente sair, y(SIM) ou n(NÃO): ")
+    try:
+        if response == 'y':
+            sys.exit(0)
+    except KeyboardInterrupt:
+        print("exiting...")
+    
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("-p", "--path", required=True, help="Path to save books")
@@ -48,8 +58,11 @@ if __name__ == "__main__":
     path_download = args["path"]
 
     if not os.path.exists(path_download):
-        print(f"download: Não foi possível encontrar '{path_download}' : Path not exist")
-        sys.exit()
+        #print(f"download: Não foi possivel encontrar {path_download} : Path not exist")
+        sys.exit(0)
+
+    # store the original SIGINT handler
+    signal.signal(signal.SIGINT, signal_handler)
 
     BASE_URL = 'https://link.springer.com/'
 
