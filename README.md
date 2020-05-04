@@ -22,17 +22,19 @@ $ python3 -m venv venv
 #### Ativar ambiente virtual:
 
 Linux:
-```$ source venv/bin/activate```
 
-Windows
-```> venv\Scripts\activate```
+```/DownloadBookSpringer$ source venv/bin/activate```
+
+Windows:
+
+```\DownloadBookSpringer>venv\Scripts\activate```
 
 #### Instalar dependências:
 
-```(venv) pip install -r requeriments.txt```
+```(venv) /DownloadBookSpringer$ pip install -r requeriments.txt```
 
 ### Execução
 
-```(venv) $ python3 download_files.py -p <caminho_download>```
+```(venv) /DownloadBookSpringer$ python3 download_files.py -p <caminho_download>```
 
 ![](files.png)
