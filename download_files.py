@@ -16,7 +16,6 @@ import signal
 def main(books, path_download):
     """Recebendo todas os livros em um lista de dicionario contendo as informações do livro"""
 
-    #path_download = '/home/lucas/Documentos/Apostilas-Livros/LivrosSpringer'
     path_url = '/content/pdf/'
 
     url = urljoin(BASE_URL, path_url)
@@ -58,7 +57,7 @@ if __name__ == "__main__":
     path_download = args["path"]
 
     if not os.path.exists(path_download):
-        #print(f"download: Não foi possivel encontrar {path_download} : Path not exist")
+        print(f"download: Não foi possivel encontrar {path_download} : Path not exist")
         sys.exit(0)
 
     # store the original SIGINT handler
