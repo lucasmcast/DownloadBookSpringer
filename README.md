@@ -19,13 +19,17 @@ $ git clone https://github.com/lucasmcast/DownloadBookSpringer.git
 $ cd DownloadBookSpringer
 $ python3 -m venv venv
 ```
+Ativar ambiente virtual:
+
 Linux:
 ```$ source venv/bin/activate```
 
 Windows
 ```> venv\Scripts\activate```
 
-```$ pip install -r requeriments.txt```
+Instalar dependências:
+
+```(venv) pip install -r requeriments.txt```
 
 ### Execução
 
