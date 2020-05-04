@@ -9,7 +9,7 @@ para facilitar fazer o download, sem ter o trabalho de entrar em cada livro e ba
 
 ## Instalação
 
-Requisitos:
+#### Requisitos:
 
 - Python >= 3.6
 - Python-venv
@@ -19,7 +19,7 @@ $ git clone https://github.com/lucasmcast/DownloadBookSpringer.git
 $ cd DownloadBookSpringer
 $ python3 -m venv venv
 ```
-Ativar ambiente virtual:
+#### Ativar ambiente virtual:
 
 Linux:
 ```$ source venv/bin/activate```
@@ -27,7 +27,7 @@ Linux:
 Windows
 ```> venv\Scripts\activate```
 
-Instalar dependências:
+#### Instalar dependências:
 
 ```(venv) pip install -r requeriments.txt```
 
