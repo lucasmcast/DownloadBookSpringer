@@ -18,9 +18,15 @@ Requisitos:
 $ git clone https://github.com/lucasmcast/DownloadBookSpringer.git
 $ cd DownloadBookSpringer
 $ python3 -m venv venv
-$ source venv/bin/activate
-$ pip install -r requeriments.txt
 ```
+Linux:
+```$ source venv/bin/activate```
+
+Windows
+```> venv\Scripts\activate```
+
+```$ pip install -r requeriments.txt```
+
 ### Execução
 
 ```$ python3 download_files.py -p <caminho_download>```
